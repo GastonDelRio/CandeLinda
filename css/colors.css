@@ -1,0 +1,190 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: honeydew;
+  color: #333;
+  text-align: center;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+/* Título */
+h1 {
+  color: #1565c0; /* azul fuerte */
+  font-size: 2.8em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+  animation: slideDown 1.2s ease-out;
+}
+
+/* Línea separadora */
+hr {
+  width: 60%;
+  border: 1px solid #64b5f6; /* azul claro */
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Imagen */
+img {
+  margin: 20px auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+  animation: zoomIn 1.5s ease-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+/* Párrafos */
+p {
+  font-size: 1.2em;
+  color: #444;
+  margin: 10px 0;
+  font-style: italic;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Botón */
+a.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #64b5f6, #1565c0); /* degradado azul */
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 2.2s ease-in;
+}
+
+a.btn:hover {
+  background: linear-gradient(45deg, #1976d2, #0d47a1);
+  transform: translateY(-3px);
+}
+
+/* Contenedor de la imagen + texto */
+.contenido {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+/* Imagen en contenido */
+.contenido img {
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  animation: zoomIn 1.5s ease-out;
+}
+
+/* Texto al lado de la imagen */
+.texto {
+  max-width: 400px;
+  text-align: left;
+  font-size: 1.2em;
+  color: #444;
+  font-style: italic;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Botones en fila */
+.botones {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.solo-texto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+  text-align: center;
+  font-size: 1.5em;
+  font-style: italic;
+  color: #333;
+  animation: fadeIn 2s ease-in;
+}
+/* Galería de fotos en fila */
+.galeria {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  flex-wrap: wrap; /* permite que se acomoden en pantallas chicas */
+}
+
+.galeria img {
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s;
+  animation: zoomIn 1.5s ease-out;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+/* Fondo base */
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Pseudo-elemento para fondo borroso */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);         /* desenfoque */
+  transform: scale(1.1);     /* evita bordes raros del blur */
+  z-index: -1;               /* queda detrás del contenido */
+}
+
+/* Fondos distintos según la página */
+body.fondo1::before {
+  background-image: url("../imagenes/fondo1.jpg");
+}
+
+body.fondo2::before {
+  background-image: url("../imagenes/fondo2.jpg");
+}
+
+body.fondo3::before {
+  background-image: url("../imagenes/fondo3.jpg");
+}
