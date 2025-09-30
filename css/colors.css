@@ -130,7 +130,7 @@ a.btn:hover {
   text-align: center;
   font-size: 1.5em;
   font-style: italic;
-  color: #333;
+  color: black;
   animation: fadeIn 2s ease-in;
 }
 /* Galería de fotos en fila */
@@ -187,4 +187,45 @@ body.fondo2::before {
 
 body.fondo3::before {
   background-image: url("../imagenes/fondo3.jpg");
+}
+/* Galería en grilla */
+.album {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Fotos normales */
+.album img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.album img:hover {
+  transform: scale(1.05);
+}
+
+/* Foto con texto */
+.foto-texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foto-texto img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.foto-texto p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #fff;
+  font-style: italic;
 }

@@ -6,6 +6,45 @@
     <title>Honey</title>
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="icon" type="image/png" href="imagenes/corazon negro.png">
+     <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: url("imagenes/fondo1.jpg") no-repeat center center/cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      background: royalblue;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: transform 0.2s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: dodgerblue;
+    }
+  </style>
+
+
 
   </head>
   <body class="fondo1" style="background-color: honeydew">
@@ -25,5 +64,12 @@
     <p><b>Hace 1 año que empezó todo</b></p>
     <p><b>No te das idea cuánto te amo</b></p>
     <a href="pagina1.html" class="btn"> Siguiente ➝</a>
+    <button class="btn" onclick="startMusic()">Música</button>
+    <script>
+    function startMusic() {
+      // abrir ventana invisible con la música
+      window.open("musica.html", "musicaFondo", "width=1,height=1,left=-1000,top=-1000");
+    }
+    </script>
   </body>
 </html>

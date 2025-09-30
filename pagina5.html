@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kocham cię</title>
+  <link rel="stylesheet" href="css/colors.css">
+  <link rel="icon" type="image/png" href="imagenes/corazon negro.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    /* Fondo borroso */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('imagenes/fondo1.jpg') no-repeat center center/cover;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #87CEFA; /* azul clarito */
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .album {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .album img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .album img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Foto con texto al lado */
+    .foto-texto {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .foto-texto img {
+      width: 50%;
+      border-radius: 10px;
+    }
+
+    .foto-texto p {
+      font-size: 1.2em;
+      font-style: italic;
+      color: #fff;
+    }
+
+    .botones {
+      margin: 30px;
+    }
+
+    .btn {
+      text-decoration: none;
+      background-color: #1E90FF; /* azul */
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      margin: 10px;
+      transition: 0.3s ease;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #4682B4; /* azul más oscuro */
+    }
+  </style>
+</head>
+<body>
+  <h1>🖤Cande🖤</h1>
+
+  <div class="album">
+    <img src="album/1.png" alt="Foto 1">
+    <img src="album/2.png" alt="Foto 2">
+    <img src="album/3.png" alt="Foto 3">
+    <img src="album/4.png" alt="Foto 4">
+    <img src="album/5.png" alt="Foto 5">
+    <img src="album/juntos asdasd.jpg" alt="">
+    <img src="album/7.png" alt="Foto 7">
+    <img src="album/mi amor.jpg" alt="">
+    <img src="album/8.png" alt="Foto 8">
+    <img src="album/9.png" alt="Foto 9">
+    <img src="album/10.png" alt="Foto 10">
+    <img src="album/11.png" alt="Foto 11">
+    <img src="album/CELULAR.jpg" alt="celu">
+    <img src="album/acostados.jpg" alt="">
+    <img src="imagenes/23x22.jpg" alt="Foto 2">
+    <img src="album/juntos.jpg" alt="">
+    <img src="album/vino.jpg" alt="">
+    <img src="album/12.png" alt="Foto 12">
+    <img src="album/13.png" alt="Foto 13">
+    <img src="album/14.png" alt="Foto 14">
+    <img src="album/15.png" alt="Foto 15">
+    <img src="album/16.png" alt="">
+    <img src="album/mano rota.jpg" alt="">
+    <img src="album/corazon mano rota.jpg" alt="">
+    <img src="album/show.jpg" alt="">
+    <img src="album/18.png" alt="Foto 18">
+    <img src="album/pelota.jpg" alt="">
+    <img src="album/acostadossssss.jpg" alt="">
+    <img src="album/compu.jpg" alt="">
+    <img src="album/compu 2.jpg" alt="">
+    <img src="album/cine.jpg" alt="">
+    <img src="album/cine 2.jpg" alt="">
+    <img src="album/milei.jpg" alt="">
+    <img src="album/puerto madero.jpg" alt="">
+    <img src="album/ulitima.jpg" alt="">
+    <img src="album/fin.jpg" alt="">
+
+  </div>
+
+<div class="solo-texto">
+    <p>
+      Gracias por ser parte de mi vida y dajarme estos hermosos recuerdos🖤
+    </p>
+  </div>
+  
+  <div class="botones">
+    <a href="pagina4.html" class="btn">⬅ Volver</a>
+    <a href="index.html" class="btn">🏠 Inicio</a>
+  </div>
+</body>
+</html>
